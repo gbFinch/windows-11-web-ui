@@ -1,0 +1,22 @@
+.button {
+  width: var(--taskbar-icon-hit-target);
+  height: var(--taskbar-icon-hit-target);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-small);
+  font-size: 20px;
+  transition: background var(--duration-fast) var(--easing-default);
+}
+
+.button:hover {
+  background: var(--color-subtle-hover);
+}
+
+.button:active {
+  background: var(--color-subtle-pressed);
+}
+
+.active {
+  background: var(--color-subtle-selected);
+}

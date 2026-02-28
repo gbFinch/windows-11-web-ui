@@ -1,0 +1,71 @@
+:root {
+  /* Surface colors */
+  --color-surface-primary: #2d2d2d;
+  --color-surface-secondary: #1f1f1f;
+  --color-surface-tertiary: #282828;
+  --color-taskbar: rgba(30, 30, 30, 0.7);
+  --color-start-menu: rgba(44, 44, 44, 0.96);
+
+  /* Text colors */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #c5c5c5;
+  --color-text-disabled: #6e6e6e;
+
+  /* Accent colors */
+  --color-accent: #0078d4;
+  --color-accent-hover: #1a86d8;
+  --color-accent-pressed: #006cbe;
+
+  /* Interactive fills */
+  --color-subtle-hover: rgba(255, 255, 255, 0.06);
+  --color-subtle-pressed: rgba(255, 255, 255, 0.04);
+  --color-subtle-selected: rgba(255, 255, 255, 0.04);
+
+  /* Icon selection */
+  --color-icon-selection-bg: rgba(0, 120, 212, 0.3);
+  --color-icon-selection-border: rgba(0, 120, 212, 0.5);
+
+  /* Borders */
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+  --color-border-default: rgba(255, 255, 255, 0.12);
+
+  /* Shadows */
+  --shadow-flyout: 0 8px 16px rgba(0, 0, 0, 0.14), 0 0 2px rgba(0, 0, 0, 0.12);
+  --shadow-tooltip: 0 4px 8px rgba(0, 0, 0, 0.14), 0 0 2px rgba(0, 0, 0, 0.12);
+
+  /* Border radius */
+  --radius-small: 4px;
+  --radius-medium: 8px;
+  --radius-large: 16px;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* Typography */
+  --font-family: 'Segoe UI Variable', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-size-caption: 12px;
+  --font-size-body: 14px;
+  --font-size-subtitle: 16px;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+
+  /* Animation */
+  --duration-fast: 150ms;
+  --duration-normal: 200ms;
+  --easing-default: ease-out;
+
+  /* Layout */
+  --taskbar-height: 48px;
+  --taskbar-icon-size: 24px;
+  --taskbar-icon-hit-target: 40px;
+  --desktop-icon-size: 48px;
+  --desktop-icon-cell: 76px;
+}

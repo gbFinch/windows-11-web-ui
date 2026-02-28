@@ -1,0 +1,24 @@
+.clock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-small);
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--easing-default);
+  line-height: 1.3;
+}
+
+.clock:hover {
+  background: var(--color-subtle-hover);
+}
+
+.time {
+  font-size: var(--font-size-caption);
+}
+
+.date {
+  font-size: var(--font-size-caption);
+  color: var(--color-text-secondary);
+}

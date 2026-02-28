@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "Windows 11 Web UI",
+    "created": "2026-02-28T13:58:09.203+01:00",
+    "updated": "2026-02-28T14:28:00.000+01:00",
+    "status": "completed"
+  },
+  "classification": {
+    "primary_type": "new-project",
+    "secondary_types": [],
+    "rationale": "Building a complete Windows 11 desktop UI web application from scratch — requires both project setup (greenfield) and full implementation of all UI components."
+  },
+  "codebase_snapshot": {
+    "scanned_at": "2026-02-28T14:28:00.000+01:00",
+    "has_existing_code": true,
+    "detected_stack": {
+      "language": "TypeScript",
+      "runtime": "Node.js",
+      "framework": "React",
+      "build_tool": "Vite",
+      "test_framework": "Vitest",
+      "package_manager": "npm"
+    },
+    "folder_structure": "src/\n  components/\n    Desktop/\n    Taskbar/\n    StartMenu/\n  data/\n  styles/\n  types/\ntests/\n  components/\npublic/",
+    "source_files": ["src/main.tsx", "src/App.tsx", "src/components/Desktop/Desktop.tsx", "src/components/Desktop/DesktopIcon.tsx", "src/components/Taskbar/Taskbar.tsx", "src/components/Taskbar/StartButton.tsx", "src/components/Taskbar/TaskbarIcon.tsx", "src/components/Taskbar/SystemTray.tsx", "src/components/Taskbar/Clock.tsx", "src/components/StartMenu/StartMenu.tsx", "src/components/StartMenu/SearchBar.tsx", "src/components/StartMenu/PinnedApps.tsx", "src/components/StartMenu/AppTile.tsx", "src/components/StartMenu/RecommendedSection.tsx", "src/components/StartMenu/RecommendedItem.tsx", "src/components/StartMenu/UserPowerRow.tsx", "src/data/desktopIcons.tsx", "src/data/taskbarIcons.tsx", "src/data/pinnedApps.tsx", "src/data/recommendedItems.tsx", "src/types/index.ts"],
+    "test_files": ["tests/setup.ts", "tests/components/Desktop/DesktopIcon.test.tsx", "tests/components/Desktop/Desktop.test.tsx", "tests/components/Taskbar/StartButton.test.tsx", "tests/components/Taskbar/TaskbarIcon.test.tsx", "tests/components/Taskbar/Clock.test.tsx", "tests/components/StartMenu/StartMenu.test.tsx", "tests/components/StartMenu/AppTile.test.tsx"],
+    "config_files": ["tsconfig.json", "tsconfig.node.json", "vite.config.ts", "eslint.config.js", ".prettierrc"],
+    "summary": "React 18 + TypeScript project using Vite. 21 source files implementing 15 components across 3 UI regions (Desktop, Taskbar, StartMenu). 7 test files with 22 passing tests. CSS Modules with Windows 11 dark theme tokens. Build: 171KB JS + 11KB CSS."
+  },
+  "chain": [
+    {"sequence": 1, "agent_id": "vision", "artifact": "01-vision.md", "artifact_type": "document", "status": "completed", "human_gate": false, "attempts": [{"verdict": {"verdict": "pass", "average_score": 8.8}}]},
+    {"sequence": 2, "agent_id": "research", "artifact": "02-research.md", "artifact_type": "document", "status": "completed", "human_gate": false, "attempts": [{"verdict": {"verdict": "pass", "average_score": 9.0}}]},
+    {"sequence": 3, "agent_id": "tech-stack", "artifact": "03-tech-stack.md", "artifact_type": "document", "status": "completed", "human_gate": true, "attempts": [{"verdict": {"verdict": "pass", "average_score": 9.0}}]},
+    {"sequence": 4, "agent_id": "architecture", "artifact": "04-architecture.md", "artifact_type": "document", "status": "completed", "human_gate": true, "attempts": [{"verdict": {"verdict": "pass", "average_score": 8.8}}]},
+    {"sequence": 5, "agent_id": "project-structure", "artifact": "05-project-structure.md", "artifact_type": "document", "status": "completed", "human_gate": false, "attempts": [{"verdict": {"verdict": "pass", "average_score": 8.8}}]},
+    {"sequence": 6, "agent_id": "scaffolding", "artifact": "scaffolding", "artifact_type": "code", "status": "completed", "human_gate": false, "attempts": [{"verdict": {"verdict": "pass", "average_score": 8.6}}]},
+    {"sequence": 7, "agent_id": "impl-plan", "artifact": "07-implementation-plan.md", "artifact_type": "document", "status": "completed", "human_gate": true, "attempts": [{"verdict": {"verdict": "pass", "average_score": 8.4}}]},
+    {"sequence": 8, "agent_id": "test-spec", "artifact": "08-test-spec.md", "artifact_type": "document", "status": "completed", "human_gate": false, "attempts": [{"verdict": {"verdict": "pass", "average_score": 8.6}}]},
+    {"sequence": 9, "agent_id": "tests", "artifact": "tests", "artifact_type": "code", "status": "completed", "human_gate": false, "attempts": [{"verdict": {"verdict": "pass", "average_score": 8.6}}]},
+    {"sequence": 10, "agent_id": "code", "artifact": "code", "artifact_type": "code", "status": "completed", "human_gate": false, "attempts": [{"verdict": {"verdict": "pass", "average_score": 8.4}}]},
+    {"sequence": 11, "agent_id": "review", "artifact": "11-review.md", "artifact_type": "document", "status": "completed", "human_gate": false, "attempts": [{"verdict": {"verdict": "pass", "average_score": 8.6}}]},
+    {"sequence": 12, "agent_id": "summary", "artifact": "12-summary.md", "artifact_type": "document", "status": "completed", "human_gate": false, "attempts": [{"verdict": {"verdict": "pass", "average_score": 9.0}}]}
+  ],
+  "errors": []
+}

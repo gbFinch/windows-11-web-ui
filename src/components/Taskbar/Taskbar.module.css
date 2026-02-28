@@ -1,0 +1,27 @@
+.taskbar {
+  height: var(--taskbar-height);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: var(--color-taskbar);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-top: 1px solid var(--color-border-subtle);
+  z-index: 100;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.right {
+  position: absolute;
+  right: var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: 0;
+}

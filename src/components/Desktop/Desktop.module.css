@@ -1,0 +1,19 @@
+.desktop {
+  flex: 1;
+  position: relative;
+  background:
+    radial-gradient(ellipse at 30% 80%, rgba(0, 90, 180, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 20%, rgba(80, 0, 120, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(0, 60, 140, 0.2) 0%, transparent 70%),
+    linear-gradient(135deg, #0a1628 0%, #0f2847 30%, #0c3b6e 55%, #1a0a3e 100%);
+  padding: var(--space-3);
+}
+
+.iconGrid {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  align-content: flex-start;
+  height: 100%;
+}

@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+}
+
+.allApps {
+  font-size: var(--font-size-caption);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-small);
+  transition: background var(--duration-fast) var(--easing-default);
+}
+
+.allApps:hover {
+  background: var(--color-subtle-hover);
+  color: var(--color-text-primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-1);
+  margin-top: var(--space-3);
+}

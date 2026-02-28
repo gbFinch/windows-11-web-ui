@@ -1,0 +1,41 @@
+.button {
+  width: var(--taskbar-icon-hit-target);
+  height: var(--taskbar-icon-hit-target);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-small);
+  font-size: var(--taskbar-icon-size);
+  position: relative;
+  transition: background var(--duration-fast) var(--easing-default);
+}
+
+.button:hover {
+  background: var(--color-subtle-hover);
+}
+
+.button:active {
+  background: var(--color-subtle-pressed);
+}
+
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + var(--space-2));
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-surface-primary);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-caption);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-small);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--duration-fast) var(--easing-default);
+  box-shadow: var(--shadow-tooltip);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.button:hover .tooltip {
+  opacity: 1;
+}
