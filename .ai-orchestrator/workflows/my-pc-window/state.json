@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "This PC Window",
+    "created": "2026-02-28T15:28:00Z",
+    "updated": "2026-02-28T15:38:00Z",
+    "status": "completed"
+  },
+  "classification": {
+    "primary_type": "feature",
+    "secondary_types": [],
+    "rationale": "Adding windowing functionality and This PC content to an existing Windows 11 web UI project."
+  },
+  "codebase_snapshot": {
+    "scanned_at": "2026-02-28T15:28:00Z",
+    "has_existing_code": true,
+    "detected_stack": {
+      "language": "TypeScript",
+      "runtime": "Node.js",
+      "framework": "React 18",
+      "build_tool": "Vite 6",
+      "test_framework": "Vitest",
+      "package_manager": "npm"
+    },
+    "folder_structure": "src/\n  components/\n    Desktop/\n    Taskbar/\n    StartMenu/\n    Window/\n    ThisPcContent/\n  data/\n  styles/\n  types/\ntests/\n  components/\n    Desktop/\n    Taskbar/\n    StartMenu/\n    Window/\n    ThisPcContent/\npublic/",
+    "source_files": ["src/App.tsx","src/main.tsx","src/types/index.ts","src/data/drives.ts","src/components/Window/Window.tsx","src/components/ThisPcContent/ThisPcContent.tsx","src/components/Desktop/Desktop.tsx","src/components/Desktop/DesktopIcon.tsx","src/components/Taskbar/Taskbar.tsx","src/components/Taskbar/Clock.tsx","src/components/Taskbar/TaskbarIcon.tsx","src/components/Taskbar/SystemTray.tsx","src/components/Taskbar/StartButton.tsx","src/components/StartMenu/StartMenu.tsx","src/components/StartMenu/SearchBar.tsx","src/components/StartMenu/PinnedApps.tsx","src/components/StartMenu/AppTile.tsx","src/components/StartMenu/RecommendedSection.tsx","src/components/StartMenu/RecommendedItem.tsx","src/components/StartMenu/UserPowerRow.tsx","src/data/desktopIcons.tsx","src/data/taskbarIcons.tsx","src/data/pinnedApps.tsx","src/data/recommendedItems.tsx","src/styles/theme.css","src/styles/global.css"],
+    "test_files": ["tests/setup.ts","tests/components/Window/Window.test.tsx","tests/components/ThisPcContent/ThisPcContent.test.tsx","tests/components/Desktop/Desktop.test.tsx","tests/components/Desktop/DesktopIcon.test.tsx","tests/components/Taskbar/StartButton.test.tsx","tests/components/Taskbar/Clock.test.tsx","tests/components/Taskbar/TaskbarIcon.test.tsx","tests/components/StartMenu/StartMenu.test.tsx","tests/components/StartMenu/AppTile.test.tsx"],
+    "config_files": ["tsconfig.json","vite.config.ts","eslint.config.js",".prettierrc","package.json"],
+    "summary": "React 18 + TypeScript Windows 11 web UI recreation using Vite. Has 26 source files across 5 component modules (Desktop, Taskbar, StartMenu, Window, ThisPcContent) plus data and styles. 9 test files (39 tests) using Vitest + React Testing Library. Window management fully functional with drag, resize, minimize, maximize, close, and z-index stacking."
+  },
+  "chain": [
+    {"sequence":1,"agent_id":"spec","agent_version":"1.0.0","artifact":"01-spec.md","artifact_type":"document","status":"completed","human_gate":false,"attempts":[{"started":"2026-02-28T15:28:10Z","completed":"2026-02-28T15:28:30Z","verdict":{"verdict":"pass","average_score":8.6,"summary":"Complete spec with 19 FRs, 8 NFRs, 10 ACs."}}]},
+    {"sequence":2,"agent_id":"analysis","agent_version":"1.0.0","artifact":"02-analysis.md","artifact_type":"document","status":"completed","human_gate":false,"attempts":[{"started":"2026-02-28T15:28:35Z","completed":"2026-02-28T15:29:00Z","verdict":{"verdict":"pass","average_score":8.4,"summary":"5 risks identified, all FRs analyzed, 4 gaps found."}}]},
+    {"sequence":3,"agent_id":"architecture","agent_version":"1.0.0","artifact":"03-architecture.md","artifact_type":"document","status":"completed","human_gate":false,"attempts":[{"started":"2026-02-28T15:29:05Z","completed":"2026-02-28T15:29:30Z","verdict":{"verdict":"pass","average_score":8.8,"summary":"All FRs mapped, 4 design decisions documented."}}]},
+    {"sequence":4,"agent_id":"impl-plan","agent_version":"1.0.0","artifact":"04-implementation-plan.md","artifact_type":"document","status":"completed","human_gate":true,"attempts":[{"started":"2026-02-28T15:29:35Z","completed":"2026-02-28T15:30:00Z","verdict":{"verdict":"pass","average_score":8.6,"summary":"8 steps, TDD ordering, all components covered."}}]},
+    {"sequence":5,"agent_id":"test-spec","agent_version":"1.0.0","artifact":"05-test-spec.md","artifact_type":"document","status":"completed","human_gate":false,"attempts":[{"started":"2026-02-28T15:34:05Z","completed":"2026-02-28T15:34:30Z","verdict":{"verdict":"pass","average_score":8.4,"summary":"17 test cases covering all requirements."}}]},
+    {"sequence":6,"agent_id":"tests","agent_version":"1.0.0","artifact":"tests/components/Window/Window.test.tsx, tests/components/ThisPcContent/ThisPcContent.test.tsx","artifact_type":"code","status":"completed","human_gate":false,"attempts":[{"started":"2026-02-28T15:34:35Z","completed":"2026-02-28T15:35:00Z","verdict":{"verdict":"pass","average_score":8.5,"summary":"17 tests implemented across 2 files."}}]},
+    {"sequence":7,"agent_id":"code","agent_version":"1.0.0","artifact":"src/components/Window/Window.tsx, src/components/ThisPcContent/ThisPcContent.tsx, src/data/drives.ts, src/App.tsx, src/types/index.ts","artifact_type":"code","status":"completed","human_gate":false,"attempts":[{"started":"2026-02-28T15:35:05Z","completed":"2026-02-28T15:37:00Z","verdict":{"verdict":"pass","average_score":8.7,"summary":"All 39 tests pass, zero type/lint errors."}}]},
+    {"sequence":8,"agent_id":"review","agent_version":"1.0.0","artifact":"08-review.md","artifact_type":"document","status":"completed","human_gate":false,"attempts":[{"started":"2026-02-28T15:37:05Z","completed":"2026-02-28T15:37:30Z","verdict":{"verdict":"pass","average_score":8.6,"summary":"PASS verdict, 0 critical/major issues."}}]},
+    {"sequence":9,"agent_id":"summary","agent_version":"1.0.0","artifact":"09-summary.md","artifact_type":"document","status":"completed","human_gate":false,"attempts":[{"started":"2026-02-28T15:37:35Z","completed":"2026-02-28T15:38:00Z","verdict":{"verdict":"pass","average_score":8.5,"summary":"Complete summary of all 8 prior artifacts."}}]}
+  ],
+  "errors": []
+}

@@ -23,7 +23,7 @@ async function takeScreenshots() {
     await page.screenshot({ path: 'docs/screenshots/start-menu.png' });
     console.log('✓ start-menu.png');
 
-    // Close start menu for taskbar shot
+    // Close start menu
     await startButton.click();
     await new Promise(r => setTimeout(r, 300));
   }
@@ -34,6 +34,21 @@ async function takeScreenshots() {
     clip: { x: 0, y: 1080 - 80, width: 1920, height: 80 },
   });
   console.log('✓ taskbar.png');
+
+  // This PC window — double-click the "This PC" icon
+  const thisPcIcon = await page.evaluateHandle(() => {
+    const spans = [...document.querySelectorAll('span')];
+    return spans.find(s => s.textContent === 'This PC')?.closest('div');
+  });
+  if (thisPcIcon) {
+    const box = await thisPcIcon.boundingBox();
+    if (box) {
+      await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2, { count: 2 });
+      await new Promise(r => setTimeout(r, 500));
+      await page.screenshot({ path: 'docs/screenshots/this-pc-window.png' });
+      console.log('✓ this-pc-window.png');
+    }
+  }
 
   await browser.close();
   server.httpServer.close();

@@ -8,7 +8,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 [![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white)](https://vite.dev)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![Tests](https://img.shields.io/badge/Tests-22%20passing-brightgreen)](./tests)
+[![Tests](https://img.shields.io/badge/Tests-39%20passing-brightgreen)](./tests)
 
 [Live Demo](#) · [Screenshots](#-screenshots) · [Getting Started](#-getting-started)
 
@@ -22,29 +22,19 @@
 - 📌 **Taskbar** — Pixel-accurate 48px taskbar with acrylic blur, centered icons, and tooltips
 - 🔍 **Start Menu** — Animated overlay with search bar, 18 pinned apps, recommended section, and user/power row
 - 🕐 **System Tray** — Live clock, Wi-Fi/volume/battery indicators, notification bell
+- 🪟 **Functional Windows** — Draggable, resizable windows with minimize, maximize, restore, close, and z-index stacking
+- 💾 **This PC** — Mock File Explorer with sidebar, navigation bar, and drive usage tiles
 - 🎨 **Windows 11 Dark Theme** — Exact color tokens, typography, spacing, and rounded corners
 - 🧩 **Extensible Architecture** — Every interactive element accepts callback props for future functionality
 
 ## 📸 Screenshots
 
-> **Note:** To add screenshots, run the app (`npm run dev`), take screenshots at 1920×1080, save them to a `docs/screenshots/` folder, and update the paths below.
-
-<!-- 
-Uncomment and update paths after adding screenshots:
-
-### Desktop
-![Desktop with icons](docs/screenshots/desktop.png)
-
-### Start Menu
-![Start Menu open](docs/screenshots/start-menu.png)
-
-### Taskbar
-![Taskbar close-up](docs/screenshots/taskbar.png)
--->
-
 | Desktop | Start Menu | Taskbar |
 |---------|-----------|---------|
 | ![Desktop](docs/screenshots/desktop.png) | ![Start Menu](docs/screenshots/start-menu.png) | ![Taskbar](docs/screenshots/taskbar.png) |
+
+### This PC Window
+![This PC Window](docs/screenshots/this-pc-window.png)
 
 ## 🚀 Getting Started
 
@@ -83,8 +73,10 @@ src/
 ├── components/
 │   ├── Desktop/          # Desktop surface + shortcut icons
 │   ├── Taskbar/          # Taskbar, Start button, system tray, clock
-│   └── StartMenu/        # Start Menu, search, pinned apps, recommended
-├── data/                 # Static content (icon lists, app lists)
+│   ├── StartMenu/        # Start Menu, search, pinned apps, recommended
+│   ├── Window/           # Reusable draggable/resizable window
+│   └── ThisPcContent/    # This PC file explorer content
+├── data/                 # Static content (icon lists, app lists, drives)
 ├── styles/               # Global theme tokens + CSS reset
 └── types/                # Shared TypeScript interfaces
 ```
@@ -95,6 +87,8 @@ src/
 App
 ├── Desktop
 │   └── DesktopIcon × 5
+├── Window × N (from openWindows state)
+│   └── ThisPcContent (for "This PC" windows)
 ├── Taskbar
 │   ├── StartButton
 │   ├── TaskbarIcon × 7
@@ -109,10 +103,11 @@ App
 
 ### Design Decisions
 
-- **Props-down, callbacks-up** — No state management library. Two `useState` calls in App handle all state.
+- **Props-down, callbacks-up** — No state management library. App manages desktop selection, start menu, and open windows state.
 - **CSS Modules** — Zero-runtime component-scoped styles. No CSS-in-JS overhead.
 - **CSS Custom Properties** — Full Windows 11 dark theme palette in `src/styles/theme.css`. Change one variable, update everywhere.
 - **Static data arrays** — Desktop icons, taskbar icons, and pinned apps are defined in `src/data/` as typed constants.
+- **Reusable Window component** — Accepts `children` for body content. Drag/resize via pointer events with no external libraries.
 
 ## 🎨 Design Tokens
 
@@ -148,7 +143,7 @@ Every interactive component accepts optional callback props. Adding functionalit
 
 ## 🧪 Testing
 
-22 tests across 7 test files using [Vitest](https://vitest.dev) + [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/):
+39 tests across 9 test files using [Vitest](https://vitest.dev) + [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/):
 
 ```bash
 npm run test
@@ -160,16 +155,19 @@ Tests cover:
 - Clock time/date formatting
 - Start Menu content rendering
 - App tile click callbacks
+- Window rendering, minimize, maximize, close, focus, and positioning
+- This PC content: navigation bar, sidebar, drive tiles, usage bars
 
 ## 🛣️ Roadmap
 
-- [ ] Functional windows (open, close, minimize, maximize, drag, resize)
+- [x] Functional windows (open, close, minimize, maximize, drag, resize)
+- [x] File Explorer mock UI (This PC)
 - [ ] Right-click context menus
 - [ ] Desktop icon drag-and-drop with grid snapping
+- [ ] Taskbar window indicators
 - [ ] Light theme support
 - [ ] Keyboard navigation and accessibility
 - [ ] Sound effects
-- [ ] File Explorer mock UI
 
 ## 📄 License
 
